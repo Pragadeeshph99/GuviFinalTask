@@ -1,0 +1,17 @@
+.mainform {
+  margin-top: 5%;
+  border: 2px solid dodgerblue;
+  border-radius: 25px 25px 25px 25px;
+}
+
+@media only screen and (min-width: 710px) {
+  .mainform {
+    width: 40%;
+    margin: auto;
+    margin-top: 3%;
+  }
+}
+
+#invalid {
+  font-size: 0.85rem;
+}

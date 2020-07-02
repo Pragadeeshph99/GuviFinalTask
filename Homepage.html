@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Homepage.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script src="Homepage.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-sm">
+        <span class="navbar-text text-primary">
+          <h2>Welcome <span id="username"></span></h2>
+        </span>
+        <ul class="navbar-nav ml-auto">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              id="navbardrop"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a class="nav-link dropdown-item" onclick="logout()">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card form-card">
+            <div class="card-body">
+              <div class="col col-md-8 form-group">
+                <label><h5>First name</h5> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="FName"
+                  placeholder="Enter First Name"
+                  readonly
+                  onclick="editable(this)"
+                />
+              </div>
+
+              <div class="col col-md-8 form-group">
+                <label><h5>Last name</h5></label>
+                <input
+                  id="SName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Second Name"
+                  readonly
+                  onclick="editable(this)"
+                />
+              </div>
+
+              <div class="col col-md-8 form-group">
+                <label><h5>Email address</h5></label>
+                <input
+                  id="Email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter email address"
+                  readonly
+                />
+              </div>
+
+              <div class="col col-md-8 form-group">
+                <label><h5>Create password</h5></label>
+                <input
+                  id="Password"
+                  class="form-control"
+                  type="password"
+                  readonly
+                  onclick="editable(this)"
+                />
+                <div id="invalid" class="form-group text-danger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 form-group">
+          <div class="card form-card">
+            <div class="card-body">
+              <div class="col form-row">
+                <div class="form-group col-md-6">
+                  <label><h5>City</h5></label>
+                  <input
+                    id="City"
+                    type="text"
+                    class="form-control"
+                    readonly
+                    onclick="editable(this)"
+                  />
+                </div>
+                <!-- form-group end.// -->
+                <div class="form-group col-md-6">
+                  <label><h5>Country</h5></label>
+                  <select id="Country" class="form-control" disabled>
+                    <option> Choose...</option>
+                    <option>Uzbekistan</option>
+                    <option>Russia</option>
+                    <option selected="">United States</option>
+                    <option>India</option>
+                    <option>Afganistan</option>
+                  </select>
+                </div>
+                <!-- form-group end.// -->
+              </div>
+              <div class="col col-md-8 form-group">
+                <label><h5>Age</h5> </label>
+                <input
+                  id="Age"
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter the Age"
+                  readonly
+                  onclick="editable(this)"
+                />
+              </div>
+
+              <div class="col col-md-8 form-group">
+                <label><h5>Date.Of.Birth</h5></label>
+                <input
+                  id="Dob"
+                  type="date"
+                  class="form-control"
+                  placeholder="Enter the D.O.B"
+                  readonly
+                  onclick="editable(this)"
+                />
+              </div>
+
+              <div class="col col-md-8 form-group">
+                <label><h5>Contact.No</h5></label>
+                <input
+                  id="ContactNo"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter the phone number"
+                  maxlength="10"
+                  readonly
+                  onclick="editable(this)"
+                />
+                <div id="invalidNo" class="form-group text-danger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <button class="btn btn-primary" onclick="updateValue()">Update</button>
+      </div>
+      <div id="final" class="form-group text-success text-center">
+        <span class="text-success"></span>
+      </div>
+    </div>
+  </body>
+</html>
